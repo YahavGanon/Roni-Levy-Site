@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="רוני לוי - יועץ ומהנדס סביבתי מוסמך. שירותי ייעוץ, תכנון וליווי סביבתי, סקרי אסבסט, זיהום קרקע, EHS, וליווי לבנייה ירוקה. מעל 15 שנות ניסיון.">
-    <meta name="keywords" content="רוני לוי, יועץ סביבתי, סוקר אסבסט, מהנדס סביבה, זיהום קרקע, בנייה ירוקה, איכות הסביבה, EHS, סקר אנרגיה, ייעוץ תרמי">
+    <meta name="description"
+        content="רוני לוי - יועץ ומהנדס סביבתי מוסמך. שירותי ייעוץ, תכנון וליווי סביבתי, סקרי אסבסט, זיהום קרקע, EHS, וליווי לבנייה ירוקה. מעל 15 שנות ניסיון.">
+    <meta name="keywords"
+        content="רוני לוי, יועץ סביבתי, סוקר אסבסט, מהנדס סביבה, זיהום קרקע, בנייה ירוקה, איכות הסביבה, EHS, סקר אנרגיה, ייעוץ תרמי">
     <meta property="og:title" content="רוני לוי - יועץ סביבתי והנדסת סביבה">
     <meta property="og:description" content="פתרונות סביבתיים חכמים ומקיפים. ליווי מקצועי מהשטח ועד לקבלת ההיתרים.">
     <meta property="og:type" content="website">
-    
+
+    <meta name="google-site-verification" content="tRB1iWgJBURJW1SOgiITep2qZA0diwqt67WfCKMwm_M" />
+
     <title>רוני לוי - יועץ סביבתי | סוקר אסבסט והנדסת סביבה</title>
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;800&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;800&family=Rubik:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-color: #2e7d32;
@@ -40,7 +48,7 @@
         header {
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(5px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
@@ -57,21 +65,78 @@
             color: var(--primary-color);
         }
 
+        .header-side {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            transform: scale(1.1);
+        }
+
+        #flag-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+
         nav a {
             text-decoration: none;
             color: var(--text-color);
-            margin-right: 20px;
             font-weight: 600;
             transition: color 0.3s;
+            margin-inline-end: 20px;
         }
 
-        nav a:hover, nav a.active {
+        nav a:last-child {
+            margin-inline-end: 0;
+        }
+
+        nav a:hover,
+        nav a.active {
             color: var(--primary-color);
         }
 
         .hero {
             margin-top: 70px;
-            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover;
             padding: 100px 20px;
             text-align: center;
             animation: fadeInDown 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
@@ -109,9 +174,9 @@
             width: 220px;
             height: 220px;
             border-radius: 50%;
-            object-fit: cover; 
-            object-position: center 25%; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            object-fit: cover;
+            object-position: center 25%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
             border: 4px solid var(--secondary-color);
             transition: transform 0.5s ease;
         }
@@ -122,7 +187,7 @@
 
         .about-text {
             max-width: 500px;
-            text-align: right;
+            text-align: start;
         }
 
         .about-text h2 {
@@ -145,7 +210,7 @@
             padding: 10px 20px;
             border-radius: 50px;
             font-weight: 600;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
 
@@ -177,18 +242,18 @@
             background: white;
             padding: 25px 20px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-right: 4px solid var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-inline-start: 4px solid var(--primary-color);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             font-family: 'Rubik', sans-serif;
-            font-weight: 500; 
-            font-size: 1.1rem; 
-            white-space: nowrap; 
+            font-weight: 500;
+            font-size: 1.1rem;
+            white-space: nowrap;
         }
 
         .service-card:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(46, 125, 50, 0.15); 
+            box-shadow: 0 15px 30px rgba(46, 125, 50, 0.15);
             background-color: var(--primary-color);
             color: white;
             font-weight: 700;
@@ -206,17 +271,17 @@
             margin: 0 auto;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
-        
+
         .slider-container:hover {
             transform: scale(1.01);
         }
 
         .slides {
             display: flex;
-            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         .slide {
@@ -230,7 +295,8 @@
             display: block;
         }
 
-        .prev, .next {
+        .prev,
+        .next {
             cursor: pointer;
             position: absolute;
             top: 50%;
@@ -240,17 +306,23 @@
             color: white;
             font-weight: bold;
             font-size: 24px;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             border: none;
             border-radius: 5px;
             user-select: none;
             transition: 0.3s ease;
         }
 
-        .next { right: 10px; }
-        .prev { left: 10px; }
+        .next {
+            right: 10px;
+        }
 
-        .prev:hover, .next:hover {
+        .prev {
+            left: 10px;
+        }
+
+        .prev:hover,
+        .next:hover {
             background-color: var(--primary-color);
         }
 
@@ -267,11 +339,11 @@
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         footer a:hover {
             color: white;
         }
-        
+
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -289,12 +361,12 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation: pulse 2s infinite; 
+            animation: pulse 2s infinite;
         }
 
         .whatsapp-float:hover {
             transform: scale(1.15) rotate(-5deg);
-            animation: none; 
+            animation: none;
         }
 
         .whatsapp-icon {
@@ -314,93 +386,240 @@
             transform: translateY(0);
         }
 
-        .stagger-1 { transition-delay: 0.1s; }
-        .stagger-2 { transition-delay: 0.2s; }
-        .stagger-3 { transition-delay: 0.3s; }
-        .stagger-4 { transition-delay: 0.4s; }
-        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-1 {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-2 {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-3 {
+            transition-delay: 0.3s;
+        }
+
+        .stagger-4 {
+            transition-delay: 0.4s;
+        }
+
+        .stagger-5 {
+            transition-delay: 0.5s;
+        }
 
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
         }
 
         @media (max-width: 768px) {
-            header { flex-direction: column; padding: 15px; }
-            nav { margin-top: 10px; }
-            nav a { margin: 0 10px; }
-            .hero h1 { font-size: 2.2rem; }
-            .about-content { flex-direction: column; text-align: center; }
-            .about-text { text-align: center; }
-            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
-            .whatsapp-icon { width: 28px; height: 28px; }
-            .service-card { white-space: normal; text-align: center; }
+            header {
+                padding: 15px 20px;
+            }
+
+            .header-side {
+                gap: 15px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            }
+
+            nav.active {
+                max-height: 300px;
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+                border-bottom: 3px solid var(--primary-color);
+            }
+
+            nav a {
+                margin: 15px 0;
+                font-size: 1.1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                text-align: center;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .whatsapp-icon {
+                width: 28px;
+                height: 28px;
+            }
+
+            .service-card {
+                white-space: normal;
+                text-align: center;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
-        <div class="logo">רוני לוי - הנדסת סביבה</div>
-        <nav>
-            <a href="#about">אודות</a>
-            <a href="#services">תחומי התמחות</a>
-            <a href="#gallery">גלריה</a>
-            <a href="#contact">צור קשר</a>
-        </nav>
+        <div class="logo lang-text" data-he="רוני לוי - הנדסת סביבה" data-en="Roni Levi - Env. Engineering">רוני לוי -
+            הנדסת סביבה</div>
+
+        <div class="header-side">
+            <nav id="nav-menu">
+                <a href="#about" class="lang-text" data-he="אודות" data-en="About">אודות</a>
+                <a href="#services" class="lang-text" data-he="תחומי התמחות" data-en="Services">תחומי התמחות</a>
+                <a href="#gallery" class="lang-text" data-he="גלריה" data-en="Gallery">גלריה</a>
+                <a href="#contact" class="lang-text" data-he="צור קשר" data-en="Contact">צור קשר</a>
+            </nav>
+
+            <div class="header-controls">
+                <button id="lang-toggle" class="lang-btn" title="Change Language">
+                    <img id="flag-icon" src="https://flagcdn.com/w80/us.png" alt="English">
+                </button>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </header>
 
     <section class="hero">
-        <h1>רוני לוי - הנדסת סביבה</h1>
-        <p>פתרונות סביבתיים חכמים, מקצועיים ומקיפים לפרויקטים בכל סדר גודל. ליווי מקצועי מהשטח ועד לקבלת ההיתרים.</p>
+        <h1 class="lang-text" data-he="רוני לוי - הנדסת סביבה" data-en="Roni Levi - Environmental Engineering">רוני לוי
+            - הנדסת סביבה</h1>
+        <p class="lang-text"
+            data-he="פתרונות סביבתיים חכמים, מקצועיים ומקיפים לפרויקטים בכל סדר גודל. ליווי מקצועי מהשטח ועד לקבלת ההיתרים."
+            data-en="Smart, professional, and comprehensive environmental solutions for projects of any scale. Professional guidance from the field to permits.">
+            פתרונות סביבתיים חכמים, מקצועיים ומקיפים לפרויקטים בכל סדר גודל. ליווי מקצועי מהשטח ועד לקבלת ההיתרים.</p>
     </section>
 
     <section id="about" class="about-section">
         <div class="about-content">
             <img src="images/firstIMG.jpeg" alt="רוני לוי מהנדס סביבה ויועץ סביבתי" class="profile-img reveal">
             <div class="about-text reveal">
-                <h2>המומחיות שלי</h2>
-                <p>עם למעלה מ-15 שנות ניסיון בתחום הנדסת הסביבה, אני מספק שירותי ייעוץ, תכנון וליווי סביבתי ברמה הגבוהה ביותר. המטרה שלי היא להעניק פתרונות מדויקים שמאפשרים לפרויקט להתקדם תוך שמירה על תקני הסביבה המחמירים ביותר.</p>
+                <h2 class="lang-text" data-he="המומחיות שלי" data-en="My Expertise">המומחיות שלי</h2>
+                <p class="lang-text"
+                    data-he="עם למעלה מ-15 שנות ניסיון בתחום הנדסת הסביבה, אני מספק שירותי ייעוץ, תכנון וליווי סביבתי ברמה הגבוהה ביותר. המטרה שלי היא להעניק פתרונות מדויקים שמאפשרים לפרויקט להתקדם תוך שמירה על תקני הסביבה המחמירים ביותר."
+                    data-en="With over 15 years of experience in environmental engineering, I provide top-tier consulting, planning, and environmental guidance. My goal is to deliver precise solutions that allow projects to progress while maintaining the strictest environmental standards.">
+                    עם למעלה מ-15 שנות ניסיון בתחום הנדסת הסביבה, אני מספק שירותי ייעוץ, תכנון וליווי סביבתי ברמה הגבוהה
+                    ביותר. המטרה שלי היא להעניק פתרונות מדויקים שמאפשרים לפרויקט להתקדם תוך שמירה על תקני הסביבה
+                    המחמירים ביותר.</p>
             </div>
         </div>
-        
+
         <div class="credentials">
-            <div class="badge reveal stagger-1">🎓 תואר ראשון בהנדסה כימית</div>
-            <div class="badge reveal stagger-2">🎓 תואר שני בהנדסת סביבה</div>
-            <div class="badge reveal stagger-3">💼 15 שנות ניסיון</div>
-            <div class="badge reveal stagger-4">📜 רישיון סוקר אסבסט מורשה</div>
+            <div class="badge reveal stagger-1 lang-text" data-he="🎓 תואר ראשון בהנדסה כימית"
+                data-en="🎓 B.Sc Chemical Engineering">🎓 תואר ראשון בהנדסה כימית</div>
+            <div class="badge reveal stagger-2 lang-text" data-he="🎓 תואר שני בהנדסת סביבה"
+                data-en="🎓 M.Sc Environmental Engineering">🎓 תואר שני בהנדסת סביבה</div>
+            <div class="badge reveal stagger-3 lang-text" data-he="💼 15 שנות ניסיון"
+                data-en="💼 15 Years of Experience">💼 15 שנות ניסיון</div>
+            <div class="badge reveal stagger-4 lang-text" data-he="📜 רישיון סוקר אסבסט מורשה"
+                data-en="📜 Licensed Asbestos Surveyor">📜 רישיון סוקר אסבסט מורשה</div>
         </div>
     </section>
 
     <section id="services" class="services-section">
-        <h2 class="section-title reveal">עבודות שאני עושה</h2>
+        <h2 class="section-title reveal lang-text" data-he="עבודות שאני עושה" data-en="My Services">עבודות שאני עושה
+        </h2>
         <div class="services-grid">
-            <div class="service-card reveal stagger-1">סקרי אסבסט (כולל רישיון סוקר)</div>
-            <div class="service-card reveal stagger-2">חקירת זיהום קרקע</div>
-            <div class="service-card reveal stagger-3">יועץ סביבתי להיתר</div>
-            <div class="service-card reveal stagger-4">יעוץ סביבתי לתב"ע</div>
-            <div class="service-card reveal stagger-5">ליווי בנייה ירוקה</div>
-            <div class="service-card reveal stagger-1">סקרי אנרגיה</div>
-            <div class="service-card reveal stagger-2">יעוץ תרמי</div>
-            <div class="service-card reveal stagger-3">יעוץ מיקרואקלים</div>
-            <div class="service-card reveal stagger-4">EHS (בטיחות, גיהות וסביבה)</div>
-            <div class="service-card reveal stagger-5">מיפוי בתוכנת GIS</div>
+            <div class="service-card reveal stagger-1 lang-text" data-he="סקרי אסבסט (כולל רישיון סוקר)"
+                data-en="Asbestos Surveys (Licensed)">סקרי אסבסט (כולל רישיון סוקר)</div>
+            <div class="service-card reveal stagger-2 lang-text" data-he="חקירת זיהום קרקע"
+                data-en="Soil Pollution Investigation">חקירת זיהום קרקע</div>
+            <div class="service-card reveal stagger-3 lang-text" data-he="יועץ סביבתי להיתר"
+                data-en="Environmental Consulting for Permits">יועץ סביבתי להיתר</div>
+            <div class="service-card reveal stagger-4 lang-text" data-he='יעוץ סביבתי לתב"ע'
+                data-en="Environmental Consulting for Master Plans">יעוץ סביבתי לתב"ע</div>
+            <div class="service-card reveal stagger-5 lang-text" data-he="ליווי בנייה ירוקה"
+                data-en="Green Building Accompaniment">ליווי בנייה ירוקה</div>
+            <div class="service-card reveal stagger-1 lang-text" data-he="סקרי אנרגיה" data-en="Energy Surveys">סקרי
+                אנרגיה</div>
+            <div class="service-card reveal stagger-2 lang-text" data-he="יעוץ תרמי" data-en="Thermal Consulting">יעוץ
+                תרמי</div>
+            <div class="service-card reveal stagger-3 lang-text" data-he="יעוץ מיקרואקלים"
+                data-en="Microclimate Consulting">יעוץ מיקרואקלים</div>
+            <div class="service-card reveal stagger-4 lang-text" data-he="EHS (בטיחות, גיהות וסביבה)"
+                data-en="EHS (Health & Safety)">EHS (בטיחות, גיהות וסביבה)</div>
+            <div class="service-card reveal stagger-5 lang-text" data-he="מיפוי בתוכנת GIS" data-en="GIS Mapping">מיפוי
+                בתוכנת GIS</div>
         </div>
     </section>
 
     <section id="gallery" class="gallery-section">
-        <h2 class="section-title reveal">מבט לעשייה הסביבתית</h2>
+        <h2 class="section-title reveal lang-text" data-he="מבט לעשייה הסביבתית" data-en="Environmental Work Overview">
+            מבט לעשייה הסביבתית</h2>
         <div class="slider-container reveal stagger-2">
             <div class="slides" id="slides">
-                <div class="slide"><img src="https://media.istockphoto.com/id/1385593442/photo/two-young-engineers-are-working-on-solar-power-generation.jpg?s=612x612&w=0&k=20&c=-mvr-o9NXrn96w_aV6pkYKqGW8m4TsrQQvlmEmJ_5lg=" alt="תכנון הנדסי ופרויקטים סביבתיים"></div>
-                <div class="slide"><img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="שמירה על איכות הסביבה וייעוץ סביבתי"></div>
-                <div class="slide"><img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="פיתוח ובנייה ירוקה"></div>
+                <div class="slide"><img
+                        src="https://media.istockphoto.com/id/1385593442/photo/two-young-engineers-are-working-on-solar-power-generation.jpg?s=612x612&w=0&k=20&c=-mvr-o9NXrn96w_aV6pkYKqGW8m4TsrQQvlmEmJ_5lg="
+                        alt="תכנון הנדסי ופרויקטים סביבתיים"></div>
+                <div class="slide"><img
+                        src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="שמירה על איכות הסביבה וייעוץ סביבתי"></div>
+                <div class="slide"><img
+                        src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="פיתוח ובנייה ירוקה"></div>
             </div>
             <button class="prev" onclick="moveSlide(-1)">&#10095;</button>
             <button class="next" onclick="moveSlide(1)">&#10094;</button>
@@ -408,21 +627,65 @@
     </section>
 
     <footer id="contact" class="reveal">
-        <h2>מוכנים לצאת לדרך?</h2>
-        <p>צרו קשר לקבלת ייעוץ ראשוני והצעת מחיר.</p>
+        <h2 class="lang-text" data-he="מוכנים לצאת לדרך?" data-en="Ready to get started?">מוכנים לצאת לדרך?</h2>
+        <p class="lang-text" data-he="צרו קשר לקבלת ייעוץ ראשוני והצעת מחיר."
+            data-en="Contact me for an initial consultation and quote.">צרו קשר לקבלת ייעוץ ראשוני והצעת מחיר.</p>
         <p style="margin-top: 20px; font-size: 1.2rem;">
-            📞 טלפון: <a href="tel:0523607150">052-3607150</a> | ✉️ אימייל: <a href="mailto:roni_lvy@walla.com">roni_lvy@walla.com</a>
+            📞 <span class="lang-text" data-he="טלפון:" data-en="Phone:">טלפון:</span> <a href="tel:0523607150"
+                dir="ltr">052-3607150</a> |
+            ✉️ <span class="lang-text" data-he="אימייל:" data-en="Email:">אימייל:</span> <a
+                href="mailto:roni_lvy@walla.com">roni_lvy@walla.com</a>
         </p>
-        <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.7;">נבנה באהבה על ידי האחיין</p>
+        <p class="lang-text" style="margin-top: 30px; font-size: 0.9rem; opacity: 0.7;"
+            data-he="נבנה באהבה על ידי האחיין" data-en="Built with love by the nephew">נבנה באהבה על ידי האחיין</p>
     </footer>
 
-    <a href="https://wa.me/972523607150?text=היי%20רוני,%20הגעתי%20דרך%20האתר%20ואשמח%20להתייעץ" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/972523607150?text=היי%20רוני,%20הגעתי%20דרך%20האתר%20ואשמח%20להתייעץ" class="whatsapp-float"
+        target="_blank" rel="noopener noreferrer">
         <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
         </svg>
     </a>
 
     <script>
+
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinksList = document.querySelectorAll('nav a');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinksList.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        const langToggle = document.getElementById('lang-toggle');
+        const flagIcon = document.getElementById('flag-icon');
+        const langTexts = document.querySelectorAll('.lang-text');
+        let currentLang = 'he';
+
+        langToggle.addEventListener('click', () => {
+
+            currentLang = currentLang === 'he' ? 'en' : 'he';
+
+            flagIcon.src = currentLang === 'he' ? 'https://flagcdn.com/w80/us.png' : 'https://flagcdn.com/w80/il.png';
+            flagIcon.alt = currentLang === 'he' ? 'English' : 'עברית';
+
+            document.documentElement.setAttribute('dir', currentLang === 'he' ? 'rtl' : 'ltr');
+            document.documentElement.setAttribute('lang', currentLang);
+
+            langTexts.forEach(el => {
+                el.textContent = el.getAttribute(`data-${currentLang}`);
+            });
+        });
+
         let currentSlide = 0;
         const slides = document.getElementById('slides');
         const totalSlides = document.querySelectorAll('.slide').length;
@@ -438,7 +701,8 @@
         }
 
         function updateSlider() {
-            slides.style.transform = `translateX(${currentSlide * 100}%)`;
+            const rtlMultiplier = document.documentElement.getAttribute('dir') === 'rtl' ? 1 : -1;
+            slides.style.transform = `translateX(${currentSlide * 100 * rtlMultiplier}%)`;
         }
 
         setInterval(() => {
@@ -450,7 +714,7 @@
 
         window.addEventListener('scroll', () => {
             let current = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 if (window.scrollY >= sectionTop - 150) {
@@ -468,18 +732,18 @@
 
         const revealElements = document.querySelectorAll('.reveal');
 
-        const revealCallback = function(entries, observer) {
+        const revealCallback = function (entries, observer) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    observer.unobserve(entry.target); 
+                    observer.unobserve(entry.target);
                 }
             });
         };
 
         const revealOptions = {
-            threshold: 0.1, 
-            rootMargin: "0px 0px -50px 0px" 
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
         };
 
         const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
@@ -489,4 +753,6 @@
         });
     </script>
 </body>
+
 </html>
+
